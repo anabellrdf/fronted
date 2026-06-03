@@ -1,0 +1,48 @@
+.capa-izquierda{
+    width: 30%;
+    height: 200px;
+    background-color: rgb(89, 0, 255, 0.5);
+    margin-top: 50px;
+    margin-left: 200px;
+    box-shadow: 5px 5px 5px rgba(4, 33, 112, 0.5);
+    border-radius: 10px;
+    position: absolute;
+}
+
+* {
+    margin: 0;
+}
+
+.capa-derecha{
+    width: 30%;
+    height: 200px;
+    background-color: rgb(174, 0, 255, 0.5);
+    margin-top: 150px;
+    margin-left: 500px;
+    box-shadow: 5px 5px 5px rgba(4, 33, 112, 0.5);
+    border-radius: 10px;
+    position: absolute;
+}
+
+.resaltar-capa:hover{
+    z-index: 10;
+    transform: scale(1.5);
+}
+
+.capa-emoji{
+    content: "🍓";
+    width: 150px;
+    height: 50px;
+    background-color: rgb(242, 0, 255);
+    margin-top: 400px;
+    margin-left: -100px;
+    border-radius: 0px 25px 25px 0px;
+    position: absolute;
+    transition: 300ms;
+    text-align: right;
+    font-size: 25pt;
+}
+
+.capa-emoji:hover{
+    margin-left: 0px;
+}

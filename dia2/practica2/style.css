@@ -1,0 +1,58 @@
+.capa-izquierda{
+    width: 30%;
+    height: 200px;
+    background-color: rgb(67, 172, 233, 0.5);
+    margin-top: 50px;
+    margin-left: 200px;
+    /* sombra y esquina */
+    box-shadow: 5px 5px 5px rgb(111, 141, 111, 0.5);
+    border-radius: 10px;
+    position: absolute;
+}
+
+* {
+    margin: 0;
+}
+
+.capa-derecha{
+    width: 30%;
+    height: 200px;
+    background-color: rgba(213, 98, 239, 0.5);
+    margin-top: 150px;
+    margin-left: 500px;
+    /* sombra y esquina */
+    box-shadow: 5px 5px 5px rgb(111, 141, 111, 0.5);
+    border-radius: 10px;
+    position: absolute;
+}
+
+.resaltar-capa:hover{
+    z-index: 10;
+    transform: scale(1.5);
+
+}
+
+.capa-emoji{
+    width: 50px;
+    height: 50px;
+    margin-left: 100px;
+    position: absolute;
+    
+}
+
+.capa-fondo{
+    /* content: "🍓" */
+    width: 150px;
+    height: 50px;
+    background-color: rgba(239, 98, 208, 0.797);
+    margin-top: 400px;
+    margin-left: -100px;
+    /* sombra y esquina */
+    border-radius: 0px 25px 25px 0px;
+    position: absolute;
+    transition: 300ms;
+}
+
+.capa-fondo:hover{
+    margin-left: 0px;
+}
