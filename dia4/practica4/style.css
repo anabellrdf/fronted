@@ -1,0 +1,18 @@
+h1{
+    font-family: arial;
+    font-size: 18pt;
+    color:rgb(153, 0, 255);
+}
+
+.btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.btn-envio{
+    background-color: rgb(50, 244, 228);
+    color: darkmagenta;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12pt;
+}

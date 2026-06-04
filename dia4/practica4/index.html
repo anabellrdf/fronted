@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro de clientes</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="resources/icono.ico">
+
+    </head>
+    <body>
+        <h1>Registro de clientes</h1>
+        <form method="post" action="guardar-cliente">
+            <input type="text" placeholder="Nombre y Apellido" required autofocus><br>
+            <label>Fecha de nacimiento</label>
+            <input type="date" ><br>
+            <select>
+                <option disabled>Elige tu ciudad</option>
+                <option>Asuncion</option>
+                <option>San Lorenzo</option>
+                <option>Ñemby</option>
+                <option>Luque</option>
+            </select>
+            <textarea placeholder="Escribe una direccion"></textarea><br>
+            <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-72.50976562500001%2C-28.6905876542507%2C-49.8779296875%2C-18.145851771694467&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=6/-23.52/-61.19">Ver el mapa más grande</a></small>
+            <input type="text" placeholder="Numero de telefono"><br>
+            <input type="email" placeholder="Correo Electronico"><br>
+            <lable>Genero</lable>
+            <input type="radio" name="genero">Hombre<br>
+            <input type="radio" name="genero">Mujer<br>
+            <input type="radio" name="genero">X<br>
+            <button class="btn btn-envio">Enviar</button>
+        </form>
+
+    </body>
+    <script src="script.js"></script>
+</html>

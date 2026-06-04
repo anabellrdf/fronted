@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(100, 181, 222);
+}
+
+.container{
+    width: 90%;
+    height: max-content; /* el alto siempre va a ser igual al contenido */
+    margin: auto;
+    position: relative;
+}
+
+.capa-left,.capa-right{
+    width: 50%;
+    height: max-content;
+    float: left;
+}
+
+.capa-right{
+    background-color: rgb(244, 131, 201);
+    border-radius: 15px;
+}
+
+.img-w{
+    width: 40%;
+    height: auto;
+    margin-left: 30px;
+    position: absolute;
+
+}
+
+*{
+ font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+h1{
+    font-size: 50pt;
+    text-align: center;
+    color: blueviolet;
+}
+
+h2{
+    font-size: 25pt;
+    text-align: center;
+    color: rgb(0, 255, 76);
+}
+
+input{
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 5%;
+    background-color: rgb(161, 123, 186);
+}
+
+button{
+    width: 90%;
+    height: 30px;
+    background-color: rgb(16, 241, 207);
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+a{
+    text-decoration: underline;
+    color:rgb(97, 89, 183);
+    display: block;
+    text-align: center;
+}
