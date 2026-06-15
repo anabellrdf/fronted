@@ -1,0 +1,58 @@
+/*reset minimo*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+header{
+    background: rgb(174, 0, 255);
+    color: white;
+    padding: 16px 24px;
+}
+
+nav{
+    background: lightseagreen;
+    display: flex;
+    gap: 16px;
+    padding: 10px 24px;
+}
+
+nav a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 16px;
+    padding: 16px 24px;
+}
+
+section{
+    background: rgb(255, 123, 0);
+    padding: 16px;
+}
+
+aside{
+    background: rgb(128, 255, 0);
+    padding: 16px;
+}
+
+footer{
+    background: rgb(0, 247, 255);
+    color: aliceblue;
+    text-align: center;
+    padding: 12px;
+}
+
+@media (max-width: 600px){
+    main{
+        grid-template-columns: 1fr;
+    }
+}
+
