@@ -1,0 +1,45 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: rgb(4, 4, 4);
+    color: aliceblue;
+    text-align: center;
+    margin: 0;
+}
+
+header{
+    background: rgb(31, 82, 31);
+    padding: 20px;
+}
+
+.portada{
+    background-image: url(imagenes/tabber.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contador{
+    background: rgb(31, 82, 31, 0.6);
+    padding: 16px 28px;
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+#videos{
+    padding: 30px;
+}
+
+#videos a{
+    color: rgb(145, 230, 198);
+    display: block;
+    margin: 8px;
+}
+
+footer{
+    background: rgb(31, 82, 31);
+    padding: 16px;
+    color: black;
+}
