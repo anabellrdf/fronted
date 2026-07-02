@@ -1,0 +1,44 @@
+#clientes{
+    width: 90%;
+    border: solid 2px rgb(15, 15, 108);
+    border-collapse: collapse;
+
+}
+
+#clientes td{
+    border: solid 1px rgb(0, 229, 255);
+}
+
+/*#venta{
+    width: 90%;
+    border: solid 2px rgb(15, 15, 108);
+    border-collapse: collapse;
+
+}*/
+
+/*#venta td{
+    border: solid 1px rgb(0, 229, 255);
+}*/
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+.table{
+    width: 100%;
+    border: solid 1px rgb(0, 34, 255);
+    border-collapse: collapse;
+}
+
+.table td{
+    border: solid 1px rgb(0, 229, 255);
+    border-collapse: collapse;
+}
+
+.resaltado-total{
+    background-color: aqua;
+}
