@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevStudio PY - Desarrollo Web y Software a Medida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+<!-- header -->
+    <header class="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold tracking-tight text-blue-600">
+                        devstudio <span class="text-gray-900">py</span>
+                    </a>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Servicios</a>
+                    <a href="#planes" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Planes</a>
+                    <a href="#cotizador" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Cotizador</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contacto</a>
+                </nav>
+
+                <div class="flex md:hidden">
+                    <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Abrir menú principal</span>
+                        <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-inner">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium transition-colors">Inicio</a>
+                <a href="#servicios" class="block text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium transition-colors">Servicios</a>
+                <a href="#planes" class="block text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium transition-colors">Planes</a>
+                <a href="#cotizador" class="block text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium transition-colors">Cotizador</a>
+                <a href="#contacto" class="block text-gray-600 hover:text-blue-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium transition-colors">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="h-16"></div>
+<!-- hero -->
+    <section id="hero" class="relative bg-gradient-to-br from-blue-50 via-white to-gray-100 overflow-hidden py-12 md:py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Dos columnas en escritorio, apiladas en celular -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Columna Izquierda: Textos y CTAs -->
+                <div class="space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold tracking-wide uppercase">
+                        <span>🇵🇾 Impulsando MiPyMEs en Paraguay</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+                        Llevá tu negocio al mundo digital con una <span class="text-blue-600">Web a Medida</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto md:mx-0">
+                        Diseñamos sitios web profesionales y sistemas optimizados para vender más. La solución tecnológica que tu empresa paraguaya necesita para crecer sin límites.
+                    </p>
+                    
+                    <!-- Botones de Acción (Navegación nativa por anclas HTML) -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
+                        <a href="#contacto" id="hero-cta-budget" class="w-full sm:w-auto text-center px-8 py-3.5 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 shadow-lg shadow-blue-500/20 transition-all transform hover:-translate-y-0.5">
+                            Solicitar presupuesto
+                        </a>
+                        <a href="#planes" id="hero-cta-plans" class="w-full sm:w-auto text-center px-8 py-3.5 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10 shadow-sm transition-all transform hover:-translate-y-0.5">
+                            Ver planes
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Elemento Visual de Interfaz (Tailwind Puro) -->
+                <div class="relative flex justify-center items-center lg:pl-8">
+                    <!-- Decoración abstracta de fondo -->
+                    <div class="absolute w-72 h-72 sm:w-96 sm:h-96 bg-blue-400/10 rounded-full blur-3xl -top-10 -left-10"></div>
+                    <div class="absolute w-72 h-72 sm:w-96 sm:h-96 bg-indigo-400/10 rounded-full blur-3xl -bottom-10 -right-10"></div>
+                    
+                    <!-- Simulación de interfaz de software / Analíticas -->
+                    <div class="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-gray-100 p-4 sm:p-6 transform hover:scale-[1.02] transition-transform duration-300">
+                        <div class="flex items-center space-x-2 border-b border-gray-100 pb-4 mb-4">
+                            <span class="w-3 h-3 bg-red-400 rounded-full"></span>
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+                            <span class="w-3 h-3 bg-green-400 rounded-full"></span>
+                            <span class="text-xs text-gray-400 pl-2 font-mono">devstudio.com.py/tu-empresa</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-8 bg-gray-100 rounded-md w-3/4"></div>
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="h-20 bg-blue-50 rounded-lg p-3 flex flex-col justify-between border border-blue-100">
+                                    <span class="text-[10px] uppercase font-bold text-blue-500 tracking-wider">Ventas</span>
+                                    <span class="text-base sm:text-lg font-extrabold text-gray-900">+145%</span>
+                                </div>
+                                <div class="h-20 bg-green-50 rounded-lg p-3 flex flex-col justify-between border border-green-100">
+                                    <span class="text-[10px] uppercase font-bold text-green-500 tracking-wider">Visitas</span>
+                                    <span class="text-base sm:text-lg font-extrabold text-gray-900">12.4k</span>
+                                </div>
+                                <div class="h-20 bg-purple-50 rounded-lg p-3 flex flex-col justify-between border border-purple-100">
+                                    <span class="text-[10px] uppercase font-bold text-purple-500 tracking-wider">Conversión</span>
+                                    <span class="text-base sm:text-lg font-extrabold text-gray-900">4.8%</span>
+                                </div>
+                            </div>
+                            <div class="h-32 bg-gray-50 rounded-xl p-4 flex items-end">
+                                <div class="w-full flex items-end justify-between h-24 px-2">
+                                    <div class="w-6 bg-blue-200 h-8 rounded-t"></div>
+                                    <div class="w-6 bg-blue-300 h-14 rounded-t"></div>
+                                    <div class="w-6 bg-blue-400 h-10 rounded-t"></div>
+                                    <div class="w-6 bg-blue-500 h-20 rounded-t"></div>
+                                    <div class="w-6 bg-blue-600 h-24 rounded-t"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- servicios -->
+    <section id="servicios" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Título de la Sección -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Soluciones Digitales</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
+                    Servicios diseñados para el crecimiento de tu empresa
+                </p>
+                <div class="mt-4 h-1 w-16 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Grilla adaptativa: 1 columna en móvil, 2 en tablets y 3 en escritorio -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Tarjeta 1: Landing Pages -->
+                <div class="group relative bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-blue-500/20 hover:-translate-y-1">
+                    <div class="inline-flex items-center justify-center p-3 bg-blue-100 text-blue-600 rounded-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                        <!-- Icono SVG: Cohete / Conversión -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">Landing Pages</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Páginas de aterrizaje de alto impacto optimizadas para captar leads y maximizar la conversión en tus campañas.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 2: Sitios Corporativos -->
+                <div class="group relative bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-blue-500/20 hover:-translate-y-1">
+                    <div class="inline-flex items-center justify-center p-3 bg-blue-100 text-blue-600 rounded-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                        <!-- Icono SVG: Empresa / Edificio -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">Sitios Corporativos</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Diseños institucionales elegantes y responsivos que reflejan la seriedad, valores e identidad única de tu negocio.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 3: Tiendas Online -->
+                <div class="group relative bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-blue-500/20 hover:-translate-y-1">
+                    <div class="inline-flex items-center justify-center p-3 bg-blue-100 text-blue-600 rounded-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                        <!-- Icono SVG: Carrito de Compras -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">Tiendas Online</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Plataformas e-commerce auto-gestionables con pasarelas de pago integradas locales para automatizar tus ventas 24/7.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 4: Mantenimiento y Soporte -->
+                <div class="group relative bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-blue-500/20 hover:-translate-y-1">
+                    <div class="inline-flex items-center justify-center p-3 bg-blue-100 text-blue-600 rounded-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                        <!-- Icono SVG: Soporte / Ajustes -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">Mantenimiento y Soporte</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        Monitoreo continuo, actualizaciones de seguridad periódicas y optimización de rendimiento para que tu web nunca deje de funcionar.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- cotizador -->
+    <section id="cotizador" class="py-16 md:py-24 bg-gray-100 border-t border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Encabezado del Cotizador -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Presupuesto en Línea</h2>
+                <p class="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
+                    Cotizá tu proyecto a la medida
+                </p>
+                <p class="mt-3 text-lg text-gray-600">
+                    Seleccioná tu plan base e incluí los adicionales que necesites para calcular una estimación inmediata.
+                </p>
+            </div>
+
+            <!-- Contenedor Principal del Formulario y Panel de Total -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                
+                <!-- Columna de Configuración (2 tercios en desktop) -->
+                <form class="lg:col-span-2 space-y-8">
+                    
+                    <!-- Bloque 1: Plan Base (Radios con data-precio) -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200/60">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-600">1</span>
+                            Seleccioná tu Plan Base
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <!-- Radio Landing -->
+                            <label class="relative flex flex-col p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition-colors focus-within:ring-2 focus-within:ring-blue-500">
+                                <input type="radio" name="plan_base" value="landing" data-precio="490000" class="sr-only" checked>
+                                <span class="text-sm font-semibold text-gray-900">Landing Page</span>
+                                <span class="mt-2 text-xs text-gray-500">Ideal para conversiones directas.</span>
+                                <span class="mt-4 text-base font-extrabold text-blue-600">490.000 ₲</span>
+                            </label>
+                            
+                            <!-- Radio Corporativo -->
+                            <label class="relative flex flex-col p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition-colors focus-within:ring-2 focus-within:ring-blue-500">
+                                <input type="radio" name="plan_base" value="corporativo" data-precio="1240000" class="sr-only">
+                                <span class="text-sm font-semibold text-gray-900">Sitio Corporativo</span>
+                                <span class="mt-2 text-xs text-gray-500">Presencia institucional sólida.</span>
+                                <span class="mt-4 text-base font-extrabold text-blue-600">1.240.000 ₲</span>
+                            </label>
+                            
+                            <!-- Radio Avanzado -->
+                            <label class="relative flex flex-col p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition-colors focus-within:ring-2 focus-within:ring-blue-500">
+                                <input type="radio" name="plan_base" value="avanzado" data-precio="2480000" class="sr-only">
+                                <span class="text-sm font-semibold text-gray-900">Avanzado / E-commerce</span>
+                                <span class="mt-2 text-xs text-gray-500">Tienda online e integraciones completas.</span>
+                                <span class="mt-4 text-base font-extrabold text-blue-600">2.480.000 ₲</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Bloque 2: Módulos Extras (Checkboxes con data-precio) -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200/60">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                            <span class="flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-600">2</span>
+                            Agregá Características Extras
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Contacto Avanzado -->
+                            <label class="flex items-start p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition-colors">
+                                <input type="checkbox" name="extra_contacto" data-precio="50000" class="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <div class="ml-3 flex flex-col">
+                                    <span class="text-sm font-medium text-gray-900">Contacto Avanzado</span>
+                                    <span class="text-xs text-gray-500">+50.000 ₲</span>
+                                </div>
+                            </label>
+                            
+                            <!-- Botón WhatsApp -->
+                            <label class="flex items-start p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition-colors">
+                                <input type="checkbox" name="extra_whatsapp" data-precio="80000" class="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <div class="ml-3 flex flex-col">
+                                    <span class="text-sm font-medium text-gray-900">Integración WhatsApp Flotante</span>
+                                    <span class="text-xs text-gray-500">+80.000 ₲</span>
+                                </div>
+                            </label>
+                            
+                            <!-- Optimización SEO -->
+                            <label class="flex items-start p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition-colors">
+                                <input type="checkbox" name="extra_seo" data-precio="150000" class="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <div class="ml-3 flex flex-col">
+                                    <span class="text-sm font-medium text-gray-900">Optimización SEO Inicial</span>
+                                    <span class="text-xs text-gray-500">+150.000 ₲</span>
+                                </div>
+                            </label>
+                            
+                            <!-- Registro Dominio -->
+                            <label class="flex items-start p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition-colors">
+                                <input type="checkbox" name="extra_dominio" data-precio="70000" class="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <div class="ml-3 flex flex-col">
+                                    <span class="text-sm font-medium text-gray-900">Registro de Dominio (.com / .com.py)</span>
+                                    <span class="text-xs text-gray-500">+70.000 ₲</span>
+                                </div>
+                            </label>
+                            
+                            <!-- Panel de Administración -->
+                            <label class="flex items-start p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition-colors">
+                                <input type="checkbox" name="extra_admin" data-precio="300000" class="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <div class="ml-3 flex flex-col">
+                                    <span class="text-sm font-medium text-gray-900">Panel Admin (Autogestionable)</span>
+                                    <span class="text-xs text-gray-500">+300.000 ₲</span>
+                                </div>
+                            </label>
+                            
+                            <!-- Certificado SSL Avanzado -->
+                            <label class="flex items-start p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition-colors">
+                                <input type="checkbox" name="extra_ssl" data-precio="950000" class="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <div class="ml-3 flex flex-col">
+                                    <span class="text-sm font-medium text-gray-900">Certificado SSL Avanzado Dedicado</span>
+                                    <span class="text-xs text-gray-500">+950.000 ₲</span>
+                                </div>
+                            </label>
+
+                            <!-- Mantenimiento Mensual -->
+                            <label class="flex items-start p-4 bg-gray-50 border border-gray-200 rounded-xl cursor-pointer hover:bg-gray-100/50 transition-colors sm:col-span-2">
+                                <input type="checkbox" name="extra_mantenimiento" data-precio="100000" class="mt-1 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                <div class="ml-3 flex flex-col">
+                                    <span class="text-sm font-medium text-gray-900">Soporte técnico y Mantenimiento mensual</span>
+                                    <span class="text-xs text-gray-500">+100.000 ₲ / mes</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Columna del Resumen (Panel con id="total-cotizacion") -->
+                <div id="total-cotizacion" class="bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-blue-100 lg:sticky lg:top-24">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 pb-4 border-b border-gray-100">
+                        Resumen del Presupuesto
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500">Plan seleccionado:</span>
+                            <span class="font-semibold text-gray-800" id="resumen-plan">Landing Page</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm">
+                            <span class="text-gray-500">Extras incluidos:</span>
+                            <span class="font-semibold text-gray-800" id="resumen-extras">0</span>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-gray-100">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Total Estimado</span>
+                                <div class="flex items-baseline gap-1 mt-1">
+                                    <span class="text-3xl font-extrabold text-blue-600" id="monto-total">490.000</span>
+                                    <span class="text-xl font-bold text-blue-600">₲</span>
+                                </div>
+                                <span class="text-[11px] text-gray-400 mt-1">* Precios de referencia para proyectos estándar en Guaraníes.</span>
+                            </div>
+                        </div>
+
+                        <button type="button" class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-xl shadow-lg shadow-blue-500/25 transition-colors text-center block">
+                            Enviar mi configuración
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- presupuesto no funiona-->
+ <!-- Formulario de Presupuesto en HTML -->
+<form id="form-presupuesto" class="max-w-xl mx-auto p-6 bg-white rounded-2xl shadow-md border border-gray-100 space-y-4">
+    <div>
+        <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo *</label>
+        <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+    </div>
+
+    <div>
+        <label for="correo" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico *</label>
+        <input type="text" id="correo" name="correo" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+    </div>
+
+    <div>
+        <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono *</label>
+        <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+    </div>
+
+    <div>
+        <label for="plan" class="block text-sm font-medium text-gray-700 mb-1">Plan de Interés *</label>
+        <select id="plan" name="plan" class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all">
+            <option value="">Selecciona un plan...</option>
+            <option value="landing">Landing Page</option>
+            <option value="corporativo">Sitio Corporativo</option>
+            <option value="avanzado">Avanzado / E-commerce</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje (Opcional)</label>
+        <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all resize-none"></textarea>
+    </div>
+
+    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-lg transition-colors shadow-sm">
+        Enviar Solicitud
+    </button>
+
+    <div id="mensaje-estado" class="hidden text-sm font-medium p-3 rounded-lg text-center mt-2"></div>
+</form>
+
+<!--  contacto-->
+    <section id="contacto">
+        </section>
+
+<!-- footer -->
+    <footer>
+        </footer>
+
+</body>
+</html>
