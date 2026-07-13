@@ -1,0 +1,39 @@
+body{
+    background-color: aquamarine;
+}
+
+.titulo-app{
+    font-weight: 700px;
+    color: blueviolet;
+}
+
+.card{
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card.hover{ /*ese no es : hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgb(0, 0, 0, 0.15);
+}
+
+.car.img.top{
+    height: 350px;
+    object-fit: cover;
+}
+
+.card.title{
+    font-weight: 600px;
+    color: blue;
+}
+
+.descripcion{
+    font-size: 0.9rem;
+    color: brown;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /*que le pasa */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
