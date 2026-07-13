@@ -1,0 +1,45 @@
+<script>
+    class Calculadora{
+        #num2 ; #num1 ; #resultado
+        constructor(){
+            this.#num1 = 0
+            this.#num2 = 0
+            this.#resultado = 0
+        }
+        cargarNumeros(x,y){
+            this.#num1 = x
+            this.#num2 = y
+        }
+        sumar(){
+            this.#resultado = this.#num1 + this.#num2
+            return this.#resultado
+        }
+        resta(){
+            this.#resultado = this.#num1 - this.#num2
+            return this.#resultado
+        }
+        multi(){
+            this.#resultado = this.#num1 * this.#num2
+            return this.#resultado
+        }
+        divi(){
+            this.#resultado = this.#num1 / this.#num2
+            return this.#resultado
+        }
+
+    }
+</script>
+<h1>calculadora promaster</h1>
+<script>
+    casio = new Calculadora()
+    casio.cargarNumeros(45,7)
+    document.write("la suma es: " + casio.sumar())
+    casio.cargarNumeros(5,10)
+    document.write("<br>la suma es: " + casio.sumar())
+    casio.cargarNumeros(20,10)
+    document.write("<br>la divi es: " + casio.divi())
+    casio.cargarNumeros(2,230)
+    document.write("<br>la multi es: " + casio.multi())
+    casio.cargarNumeros(134,2)
+    document.write("<br>la resta es: " + casio.resta())
+</script>
