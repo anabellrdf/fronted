@@ -1,0 +1,35 @@
+<DOCTYPE html>
+<html lang="es-PY">
+    <head>
+        <title>prueba de jquery</title>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+        <style>
+            .mini-img{
+                width: 100px;
+                height: auto;
+            }
+            .img-visor{
+                width: 100%;
+                height: auto;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                $(".mini-img").click(function() {
+                    var nuevaSrc = $(this).attr("src")
+                    $(".img-visor").attr("src", nuevaSrc)
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <img src="imagenes/Copilot_20260627_153201.png" class="mini-img">
+        <img src="imagenes/Copilot_20260627_154049.png" class="mini-img">
+        <img src="imagenes/Copilot_20260627_154218.png" class="mini-img">
+
+        <div id="visor">
+            <img src="imagenes/Copilot_20260627_154218.png" class="img-visor">
+        </div>
+    </body>
+</html>
