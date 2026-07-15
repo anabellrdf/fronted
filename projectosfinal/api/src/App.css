@@ -1,0 +1,197 @@
+/* --- Variables de Diseño Formal y Nítido --- */
+:root {
+  --bg-main: #f8fafc;         /* Fondo claro y limpio (Slate 50) */
+  --bg-card: #ffffff;         /* Fondo de tarjetas y tablas */
+  --text-title: #0f172a;       /* Título oscuro profundo (Slate 900) */
+  --text-body: #334155;        /* Texto general legible (Slate 700) */
+  --text-muted: #64748b;       /* Texto secundario (Slate 500) */
+  
+  /* Colores de Acción Nítidos */
+  --primary: #2563eb;          /* Azul corporativo nítido */
+  --primary-hover: #1d4ed8;
+  --success: #16a34a;          /* Verde éxito */
+  --warning: #ea580c;          /* Naranja alerta/edición */
+  --warning-hover: #c2410c;
+  --danger: #dc2626;           /* Rojo eliminación */
+  --danger-hover: #b91c1c;
+  
+  --border-color: #e2e8f0;     /* Bordes finos y limpios */
+  --radius: 8px;               /* Esquinas suavizadas profesionales */
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+}
+
+/* --- Estilos Generales --- */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-body);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/* Contenedor Principal */
+.crud-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* --- Tipografía y Títulos Oscuros --- */
+h2 {
+  color: var(--text-title);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+h3 {
+  color: var(--text-title);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* --- Secciones y Tarjetas --- */
+.crud-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+/* --- Formulario e Inputs --- */
+.crud-form {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.crud-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  background-color: var(--bg-card);
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius);
+  color: var(--text-title);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.crud-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.crud-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* --- Botones --- */
+.btn {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  background-color: #e2e8f0 !important;
+  color: #94a3b8 !important;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary { background-color: var(--primary); color: white; }
+.btn-primary:hover { background-color: var(--primary-hover); }
+
+.btn-secondary { background-color: #f1f5f9; color: var(--text-body); border: 1px solid var(--border-color); }
+.btn-secondary:hover { background-color: #e2e8f0; }
+
+.btn-edit { background-color: #ffedd5; color: var(--warning); font-size: 0.85rem; padding: 6px 12px; }
+.btn-edit:hover { background-color: #fed7aa; }
+
+.btn-delete { background-color: #fee2e2; color: var(--danger); font-size: 0.85rem; padding: 6px 12px; }
+.btn-delete:hover { background-color: #fecaca; }
+
+/* --- Tabla Formal --- */
+.table-container {
+  overflow-x: auto;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.crud-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.crud-table th {
+  background-color: #f8fafc;
+  color: var(--text-title);
+  font-weight: 600;
+  padding: 14px 16px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.crud-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-body);
+}
+
+.crud-table tr:last-child td {
+  border-bottom: none;
+}
+
+.crud-table tr:hover td {
+  background-color: #f8fafc; /* Efecto sutil al pasar el cursor */
+}
+
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+/* --- Mensajes de Feedback --- */
+.status-msg {
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.status-loading {
+  background-color: #eff6ff;
+  color: var(--primary);
+  border: 1px solid #bfdbfe;
+}
+
+.status-error {
+  background-color: #fef2f2;
+  color: var(--danger);
+  border: 1px solid #fca5a5;
+}

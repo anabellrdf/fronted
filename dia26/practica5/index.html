@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>practica 5 - formulario</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>formulario de contacto</h1>
+        <form id="formulario">
+            <label for="nombre">nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="correo">correo:</label>
+            <input type="email" id="correo" required>
+            <label for="mensaje-texto">mensaje:</label>
+            <textarea id="mensaje-texto" rows="3"></textarea>
+            <button type="submit">enviar</button>
+        </form>
+        <p id="mensaje"></p>
+    </body>
+    <script src="script.js"></script>
+</html>
